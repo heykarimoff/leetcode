@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/two-sum/
 
+from typing import List
+
+
 class BruteForceSolution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         length = len(nums)
@@ -9,9 +12,10 @@ class BruteForceSolution:
                     return [i, j]
         return []
 
+
 class HashMapSolution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen = {} # hash map of key: num, value: index
+        seen = {}  # hash map of key: num, value: index
 
         # for each num in nums, check if the difference is in seen
         for i, n in enumerate(nums):

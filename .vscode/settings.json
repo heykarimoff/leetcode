@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/karimoff/.pyenv/versions/3.8.7/envs/leetcode/bin/python",
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true
+}

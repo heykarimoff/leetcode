@@ -17,18 +17,16 @@ def fibonaaci_memoization(n, memo):
     if memo[n] is not None:
         return memo[n]
 
-    memo[n] = fibonaaci_memoization(n - 1, memo) + fibonaaci_memoization(n - 2, memo)
+    memo[n] = fibonaaci_memoization(n - 1, memo) + fibonaaci_memoization(
+        n - 2, memo
+    )
     return memo[n]
 
 
-def longest(s):
-    for i in range(len(s)):
-        for j in range(i + 1, len(s) + 1):
-            print(s[i:j])
+def test_fibonaaci():
+    assert fibonaaci(n=6) == 8
 
 
-if __name__ == "__main__":
-    # n = int(input())
-    # print(fibonaaci(n)
-    # print(fibonaaci_memoization(n, [None] * (n + 1)))
-    print(longest([2, 3, -2, 4, 5]))
+def test_fibonaaci_memoization():
+    n = 6
+    assert fibonaaci_memoization(n, memo=[None] * (n + 1)) == 8

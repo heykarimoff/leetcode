@@ -14,5 +14,5 @@ def search(array, target, start, end):
         return search(array, target, start, pivot)
 
 
-if __name__ == "__main__":
-    print(search(range(1000), 10000, 0, 1000))
+def test_search():
+    assert search(range(1000), 10000, 0, 1000) == -1

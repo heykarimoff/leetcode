@@ -66,9 +66,9 @@ def evaluate(tokens: str) -> int:
     return "".join([str(i) for i in V])
 
 
-if __name__ == "__main__":
-    # print(evaluate("1+2*3"))
-    # print(evaluate(" 3 / 2"))
-    # print(evaluate(" 42"))
-    # print(evaluate("0-2147483647"))
-    print(evaluate("1-1+1"))
+def test_evaluate():
+    assert evaluate("1+2*3") == "7"
+    assert evaluate(" 3 / 2") == "1"
+    assert evaluate(" 42") == "42"
+    assert evaluate("0-2147483647") == "-2147483647"
+    assert evaluate("1-1+1") == "1"
